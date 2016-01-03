@@ -4,9 +4,10 @@ title: Building an App with React and Webpack: Rails Api
 categories: backend, Rails
 ---
 
-* RVM
-* Rails 5 beta install
-* Rails new --api
-* CRUD goals/rewards
+Outline:
 
-1. Follow up post: tests
+* Git
+  * Api & App separate repos
+* Node/NPM
+* NPM init
+* Postgresql
