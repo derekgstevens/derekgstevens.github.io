@@ -41,4 +41,25 @@ Once cloned, let's quickly update the .gitignore files.
     npm-debug.log
     .DS_Store
 
-Don't worry about the overarching project directory structure just yet, we'll cover that in future parts of this tutorial. 
+Don't worry about the overarching project directory structure just yet, we'll cover that in future parts of this tutorial.
+
+NginX
+-----
+
+I'm not a fan of exposing security risks through CORS, so we'll be proxying requests using NginX. It's a little more complicated, and requires installing NginX of course.
+
+
+Node/NPM
+--------
+
+We'll be using ES2015 features, so we'll need the latest and greatest Node.
+
+NPM init
+--------
+
+Feel free to create your package.json yourself, but I prefer the prompts provided by NPM init. Nice and easy.
+
+Postgresql
+----------
+
+I prefer to use Postgresql, but you can pretty easily switch that out for MySql or another db. I've seen a lot of tutorials using MongoDB, but I have no experience with it whatsoever.
