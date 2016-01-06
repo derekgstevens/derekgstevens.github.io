@@ -1,7 +1,6 @@
 ---
 layout: post
-title: Building an App with React and Webpack: Rails Api
-categories: backend, Rails
+title: Building an App with React and Webpack Rails Api
 ---
 
 * Git
@@ -46,7 +45,33 @@ Don't worry about the overarching project directory structure just yet, we'll co
 NginX
 -----
 
-I'm not a fan of exposing security risks through CORS, so we'll be proxying requests using NginX. It's a little more complicated, and requires installing NginX of course.
+There's two ways we can handle the API for our app. We can keep it on the same domain, but on a different port. Or we can put it on a subdomain, enabling easy scaling in the future. In this tutorial, we'll be running the API as a subdomain.
+
+No matter which route we take, however, we must decide how we'll be retrieving the data from our API via ajax requests.
+
+#### Option 1: CORS requests
+The same-origin policy prevents us from making ajax requests from one location to another (even if the target resource is on the same domain). We'd need to enable the Cross-Origin Resource Sharing (CORS) mechanism in order for us to get this working. I won't go down this path, and if you decide to, make sure you're aware of the security pitfalls. CSRF security holes exploit CORS vulnerabilities.
+
+#### Option 2: Proxy ajax requests via NginX
+Instead, we can let NginX handle proxying of requests. 
+
+Install NginX:
+
+    brew install nginx
+
+Edit nginx.conf
+
+    sudo nano /usr/local/etc/nginx/nginx.conf
+
+We'll need to add two upstreams and some location configurations so the NginX server knows where to route requests. The nginx.config file I use is below
+
+    #TODO
+
+You should be all set to run nginx. Do so by running:
+
+    sudo nginx
+
+
 
 
 Node/NPM
